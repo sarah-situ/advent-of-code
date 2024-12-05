@@ -10,6 +10,7 @@ const data = fs.readFileSync("./2024/day01-input.txt", "utf8");
 let arrayLeft = [];
 let arrayRight = [];
 
+//split data into left and right arrays
 const splitData = data.split("\n");
 splitData.forEach((row) => {
     const columns = row.split("   ");
@@ -18,5 +19,20 @@ splitData.forEach((row) => {
     arrayLeft.push(left);
     arrayRight.push(right);
 });
-console.log("Left Array:",arrayLeft);
-console.log("Right Array:", arrayRight);
+
+
+// sort arrays from descending to highest order
+arrayLeft.sort();
+arrayRight.sort();
+
+
+//store total distance
+let totalDistance = 0;
+
+//for loop to iterate arrays and find the absolute difference between left and right array
+for(let i= 0; i < arrayLeft.length; i++) {
+    //sum together differences
+totalDistance += Math.abs(arrayLeft[i] - arrayRight[i]);
+}
+console.log(totalDistance)
+
