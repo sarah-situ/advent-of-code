@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 // Read the file synchronously
-const data = fs.readFileSync("./day01-input.txt", "utf8");
+const data = fs.readFileSync("day01-input.txt", "utf8");
 
 //check that it is pulling data from day01-input.text
 // console.log("File content:", data);
@@ -40,11 +40,11 @@ for (let i = 0; i < arrayLeft.length; i++) {
 
 
 let similarity = 0;
-let count = 0
+// let count = 0
 
 
 arrayLeft.forEach(x => {
-    // count how many times the 'x' appears in arrayRight
+    // count how many times the 'x' from arrayLeft appears in arrayRight - loop over 
     const count = arrayRight.filter(element => element === x).length
    // multiply count by the 'x' value and add to similarity
    similarity += count * x
