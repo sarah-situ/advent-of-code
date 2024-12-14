@@ -13,13 +13,14 @@ const data = fs.readFileSync("day02-input.txt", "utf8");
 // console.log("File content:", data);
 
 //container to hold the levels
-let levels = [];
-levels.push(data)
+let reports = [];
+reports.push(data)
 // console.log(levels)
 
 const splitData = data.split("\n");
  splitData.forEach((row) => {
     const line = row.split (" ");
-    levels.push(line);
+    reports.push(line);
  })
- console.log(levels)
+ console.log(reports)
+ 
